@@ -1,0 +1,10 @@
+<!-- Présentation
+
+multilang_site est un projet Django conçu pour créer un site web simple et multilingue avec une gestion de contenu basique et des fonctionnalités avancées utilisant des modèles de langage (LLM). Ce projet met l'accent sur l'internationalisation, permettant de basculer entre plusieurs langues, et intègre des outils d'intelligence artificielle pour améliorer l'expérience utilisateur.
+
+Fonctionnalités
+Internationalisation (i18n) : Support de plusieurs langues (français et anglais).
+Gestion des Articles de Blog : Création, lecture et affichage des articles de blog.
+Interface Utilisateur Multilingue : Possibilité de changer la langue de l'interface utilisateur.
+Chatbot Intégré : Vue dédiée pour interagir avec un modèle de langage.
+Recherche Augmentée (RAG) : Fonctionnalité de recherche enrichie par un modèle de langage pour obtenir des réponses pertinentes. -->
