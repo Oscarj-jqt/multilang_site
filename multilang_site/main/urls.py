@@ -16,11 +16,10 @@ Including another URLconf
 """
 
 from django.urls import path
-
 from . import views
 
 # Configuration des urls pour l'app
 urlpatterns = [
     path('accueil', views.accueil, name="accueil"),
-    path('article_list', views.article_list, name="article_list")
+    path('article/<int:id>/', views.article_detail, name='article_detail')
 ]

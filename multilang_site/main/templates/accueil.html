@@ -3,13 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Multilang</title>
+    <!--Liaison des fichiers statics css et js avec les templates HTML-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'multilang_site/CSS/styles.css' %}">
+    <script src="{% static 'multilang_site/JavaScript/script.js' %}"></script>
 </head>
 <body>
-    <h1>Multilang</h1>
 
-    <h3>Découvrez des articles explorant plusieurs thèmes du développement web, à la nutrition jusqu'à la philosophie.</h3>
-    <h3>À la Une</h3>
-    <!-- Afficher l'article sur le développement web -->
+    <header class="header">
+        <a href="{% url 'accueil' %}" class="header_logo">Multilang</a>
+
+        <nav class="header_nav">
+            <ul>
+                <li>
+                    <a href="{% url 'accueil' %}">Accueil</a>
+                </li>
+                <li>
+                    <a href="">À propos</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header_button">
+            <button id ="searchBar" class="searchBtn" aria-expanded="false">
+                Rechercher
+            </button>
+            <button id="searchClose" class="searchClose">
+                Fermer la recherche
+            </button>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="">Développement</a></li>
+            <li><a href="">Nutrition</a></li>
+            <li><a href="">Philosophie</a></li>
+        </ul>
+    </nav>
+
+
+        <!-- templates/home.html -->
+
+    <!-- Page d'accueil -->
+    <div class="author">
+        <h1 class="author_heading">À la Une</h1>
+        <p class="author_body">Développement web</p>
+        <img src="../static/multilang_site/Images/home-picture.jpg" alt="" class="home-image" width="981" height="528" >
+        <!-- Exemple de contenu dynamique en Django -->
+    </div>
+
+
+    <section class="articles">
+        <h2 class="articles_heading">Derniers articles</h2>
+
+        <ul class="articles-ul">
+            <!-- Utilisation de la boucle for pour parcourir les articles -->
+            {% for article in articles %}
+            <li>
+                <a href="">
+                    <span>{{ article.title }}</span>
+                    <span class="articles-list_date">{{ article.publication_date|date:"d M Y" }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- main/templates/footer.html -->
+<footer class="footer">
+    &copy; {{ current_year }} Multilang
+</footer>
+
+
 </body>
+
 </html>

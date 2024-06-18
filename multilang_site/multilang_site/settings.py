@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -105,6 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
+# On ajoute les paramètres pour supporter l'internationalisation
+
+#activation de l'internationalisation
+USE_I18N = True
+#activation de lalocalisation
+USE_L10N = True
+#gestion des fuseaux horaires
+USE_TZ = True
+
 LANGUAGE_CODE = 'fr'
 
 # On ajoute les langues utilisables
@@ -115,18 +124,9 @@ LANGUAGES = [
     ('deu', 'Deutsch')
 ]
 
-# On ajoute les paramètres pour supporter l'internationalisation
-
-#activation internationalisation
-USE_I18N = True
-#activation localisation
-USE_L10N = True
-#gestion des fuseaux horaires
-USE_TZ = True
-
 #locale sera le répertoire où il y aura fichiers de traduction
 LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
+    os.path.join(BASE_DIR, 'main', 'locale')
 ]
 
 
@@ -140,7 +140,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'main', 'static', 'multilang_site'),
+]
+
+# Ajouter cette ligne pour définir le répertoire de collecte des fichiers statiques
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
