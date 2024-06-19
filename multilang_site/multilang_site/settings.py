@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #Autoriser Django à détecter la langue choisie par le user
+    'django.middleware.locale.LocaleMiddleware'
 ]
 
 ROOT_URLCONF = 'multilang_site.urls'
@@ -64,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n'
             ],
         },
     },
@@ -114,14 +118,16 @@ USE_L10N = True
 #gestion des fuseaux horaires
 USE_TZ = True
 
+#langue par défaut du code
 LANGUAGE_CODE = 'fr'
+TIME_ZONE = 'UTC'
 
 # On ajoute les langues utilisables
 
 LANGUAGES = [
-    ('en', 'English'),
-    ('fr', 'Français'),
-    ('deu', 'Deutsch')
+    ('fr', _('Français')),
+    ('en', _('English')),
+    ('deu', _('Deutsch'))
 ]
 
 #locale sera le répertoire où il y aura fichiers de traduction

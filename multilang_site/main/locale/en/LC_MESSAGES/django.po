@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME jacuetoscar0@gmail.com\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/accueil.html:22
+msgid "Accueil"
+msgstr "Home"
+
+#: templates/accueil.html:25
+msgid "À propos"
+msgstr "About"
+
+#: templates/accueil.html:29
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/accueil.html:36
+msgid "Rechercher"
+msgstr "Search"
+
+#: templates/accueil.html:39
+msgid "Fermer la recherche"
+msgstr "Close Search"
+
+#: templates/accueil.html:56
+msgid "Changer de langue"
+msgstr "Change language"
+
+#: templates/accueil.html:61
+msgid "Développement"
+msgstr "Development"
+
+#: templates/accueil.html:62
+msgid "Nutrition"
+msgstr "Nutrition"
+
+#: templates/accueil.html:63
+msgid "Philosophie"
+msgstr "Philosophy"
+
+#: templates/accueil.html:72
+msgid "À la Une"
+msgstr "Featured"
+
+#: templates/accueil.html:73
+msgid "Développement web"
+msgstr "Web Development"
+
+#: templates/accueil.html:80
+msgid "Derniers articles"
+msgstr "Latest articles"
+
+#: templates/accueil.html:87
+msgid "Créer une Application Multilingue avec Django et LLM"
+msgstr "Create a Multilingual Application with Django and LLM"
+
+#: templates/accueil.html:87
+msgid "Impact de la Nourriture Industrielle sur la Santé : Pourquoi Limiter ?"
+msgstr "Impact of Industrial Food on Health: Why Limit?"
+
+#: templates/accueil.html:87
+msgid "Éthique de l'Intelligence Artificielle : Défis et Réflexions"
+msgstr "Ethics of Artificial Intelligence: Challenges and Reflections"

@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-19 11:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/accueil.html:22
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/accueil.html:25
+msgid "About"
+msgstr "À propos"
+
+#: templates/accueil.html:29
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/accueil.html:36
+msgid "Search"
+msgstr "Rechercher"
+
+#: templates/accueil.html:39
+msgid "Close Search"
+msgstr "Fermer la recherche"
+
+#: templates/accueil.html:56
+msgid "Change language"
+msgstr "Changer de langue"
+
+#: templates/accueil.html:61
+msgid "Development"
+msgstr "Développement"
+
+#: templates/accueil.html:62
+msgid "Nutrition"
+msgstr "Nutrition"
+
+#: templates/accueil.html:63
+msgid "Philosophy"
+msgstr "Philosophie"
+
+#: templates/accueil.html:72
+msgid "Featured"
+msgstr "À la Une"
+
+#: templates/accueil.html:73
+msgid "Web Development"
+msgstr "Développement web"
+
+#: templates/accueil.html:80
+msgid "Latest articles"
+msgstr "Derniers articles"
