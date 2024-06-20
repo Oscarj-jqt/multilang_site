@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'multilang_site/CSS/styles.css' %}">
+    <script src="{% static 'multilang_site/JavaScript/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    <h1>Chat avec le bot</h1>
+    <form id="chat-form">
+        <textarea id="user-input" rows="4" cols="50" placeholder="Ecrivez votre question"></textarea>
+        <br>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div id="chat-response"></div>
+
+    
+</body>
+</html>

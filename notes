@@ -12,3 +12,29 @@ Readmme.md
 - **Chatbot Intégré** : Vue dédiée pour interagir avec un modèle de langage.
 - **Recherche Augmentée (RAG)** : Fonctionnalité de recherche enrichie par un modèle de langage pour obtenir des réponses pertinentes.
 
+- **Instructions de l'utilisateur de l'app** : 
+
+
+- ajouter trad pour le bouton change language
+
+Réduire la marge extérieure
+
+styliser le sélecteur de langues
+
+finir la recherche
+
+fonctionnalité de IA, etc...
+
+La dernière partie du projet : 
+
+Utilisation de Modèles de Langage (LLM) et RAG (optionnel mais recommandé) :
+
+Intégrez un chatbot utilisant un modèle de langage (par exemple, GPT) dans votre application Django.
+
+
+on va utiliser openAI et leur système d'API
+
+ressource
+https://www.freecodecamp.org/news/localize-django-app/
+
+chercher une pour la suite

@@ -23,4 +23,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-console.log('Bonjour');
+//chatbot
+$(document).ready(function() {
+    $('#chat-form').on('submit', function(event) {
+        event.preventDefault();
+        const userInput = $('#user-input').val();
+        $.ajax({
+            url: "{% url 'chatbot' %}",
+            method: 'POST',
+            data: {
+                user_input: userInput,
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success: function(response) {
+                $('#chat-response').html(response.response);
+            },
+            error: function() {
+                $('#chat-response').html("An error occurred. Please try again.");
+            }
+        });
+    });
+});
