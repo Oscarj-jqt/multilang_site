@@ -39,12 +39,13 @@ def chatbot_view(request):
 
 def get_gpt_response(prompt):
     api_key = settings.OPENAI_API_KEY
-    url = 'https://api.openai.com/v1/engines/davinci-codex/completions'
+    url = 'https://api.openai.com/v1/completions'
     headers = {
         'Authorization': f'Bearer {api_key}',
         'Content-Type': 'application/json'
     }
     data = {
+        'model': 'text-davinci-003',  # Assurez-vous d'utiliser le bon modèle
         'prompt': prompt,
         'max_tokens': 150
     }

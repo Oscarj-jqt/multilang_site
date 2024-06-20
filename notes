@@ -38,3 +38,11 @@ ressource
 https://www.freecodecamp.org/news/localize-django-app/
 
 chercher une pour la suite
+
+La dernière partie du projet : 
+
+Changer le code de views.py
+
+mettre .env dans gitignore
+
+refaire un commit et push

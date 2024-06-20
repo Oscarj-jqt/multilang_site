@@ -4,21 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'multilang_site/CSS/styles.css' %}">
-    <script src="{% static 'multilang_site/JavaScript/script.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+    <style>
+        /* Ajoutez ici vos styles CSS */
+    </style>
 </head>
 <body>
-    <h1>Chat avec le bot</h1>
+    <h1>Chat with our bot</h1>
     <form id="chat-form">
-        <textarea id="user-input" rows="4" cols="50" placeholder="Ecrivez votre question"></textarea>
+        <textarea id="user-input" rows="4" cols="50" placeholder="Type your question here..."></textarea>
         <br>
-        <button type="submit">Envoyer</button>
+        <button type="submit">Send</button>
     </form>
     <div id="chat-response"></div>
 
-    
+    <script>
+        $(document).ready(function() {
+            $('#chat-form').on('submit', function(event) {
+                event.preventDefault();
+                const userInput = $('#user-input').val();
+                $.ajax({
+                    url: "{% url 'chatbot' %}",
+                    method: 'POST',
+                    data: {
+                        user_input: userInput,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        $('#chat-response').html(response.response);
+                    },
+                    error: function() {
+                        $('#chat-response').html("An error occurred. Please try again.");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
