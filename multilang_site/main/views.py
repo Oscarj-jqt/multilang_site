@@ -1,12 +1,14 @@
-import requests
 from django.shortcuts import render
-from django.http import JsonResponse
+import json
+from django.http import HttpResponse
+from .chat_gpt import get_chat_response
 from django.conf import settings
 from datetime import datetime
 from .models import Article
+from .models import Message
+import requests
 #marquer le texte pour la localisation
 from django.utils.translation import gettext as _
-from django.utils import timezone
 
 # Create your views here.
 
@@ -28,30 +30,51 @@ def article_detail(request, id):
 
 #Vue du Chatbot
 #Elle traitera les requêtes des utilisateurs et va renvoyer les réponses GPT
+#La partie pour l'utilisateur
+def chat_view(request):
+    if request.method == "POST":
+        user_message = request.POST.get('message')
+        bot_message = get_ai_response(user_message)
+        Message.objects.create(user_message=user_message, bot_message=bot_message)
+    messages = Message.objects.all()
+    return render(request, 'chatbot.html', {'messages': messages})
 
-def chatbot_view(request):
-    if request.method == 'POST':
-        user_input = request.POST.get('user_input')
-        response_text = get_gpt_response(user_input)
-        return JsonResponse({'response': response_text})
-
-    return render(request, 'chatbot.html')
-
-def get_gpt_response(prompt):
-    api_key = settings.OPENAI_API_KEY
-    url = 'https://api.openai.com/v1/completions'
+def get_ai_response(user_input: str) -> str:
+    # Set up the API endpoint and headers
+    endpoint = "https://api.openai.com/v1/chat/completions"
     headers = {
-        'Authorization': f'Bearer {api_key}',
-        'Content-Type': 'application/json'
-    }
-    data = {
-        'model': 'text-davinci-003',  # Assurez-vous d'utiliser le bon modèle
-        'prompt': prompt,
-        'max_tokens': 150
+        "Authorization": "Bearer sk-proj-1CZXNIGuQWdrbnNtsOMaT3BlbkFJEyr4dWWRnmDHjzG8Xjf4",
+        "Content-Type": "application/json",
     }
 
-    response = requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        return response.json()['choices'][0]['text'].strip()
+    # Data payload
+    messages = get_existing_messages()
+    messages.append({"role": "user", "content": f"{user_input}"})
+    data = {
+        "model": "gpt-3.5-turbo",
+        "messages": messages,
+        "temperature": 0.7
+    }
+    response = requests.post(endpoint, headers=headers, json=data)
+    response_data = response.json()
+
+
+    # Check if 'choices' key exists in response_data
+    if 'choices' in response_data:
+        ai_message = response_data['choices'][0]['message']['content']
     else:
-        return "Sorry, I couldn't process your request."
+        ai_message = "Sorry, an error occurred while processing your request."
+
+    return ai_message
+
+def get_existing_messages() -> list:
+    """
+    Get all messages from the database and format them for the API.
+    """
+    formatted_messages = []
+
+    for message in Message.objects.values('user_message', 'bot_message'):
+        formatted_messages.append({"role": "user", "content": message['user_message']})
+        formatted_messages.append({"role": "assistant", "content": message['bot_message']})
+
+    return formatted_messages

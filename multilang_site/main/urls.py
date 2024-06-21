@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.urls import path, include
 from . import views
-from .views import chatbot_view
+
 
 # Configuration des urls pour l'app
 urlpatterns = [
@@ -25,5 +25,5 @@ urlpatterns = [
     # Inclure les URL i18n pour le changement de langue
     path('i18n/', include('django.conf.urls.i18n')) ,
     #L'url pour la  vue du chatbot
-    path('chatbot/', chatbot_view, name='chatbot') 
+    path('chat_view/', views.chat_view, name='chat_view') 
 ]
