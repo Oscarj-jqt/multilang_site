@@ -18,7 +18,7 @@ body {
     font-size: var(--font-size-base);
     background-color: #FAF5EE;
     background-image: url("");
-    margin: 0;
+    margin: 1rem 2rem 1rem 2rem;
 }
 
 a { color: var(--black) }
@@ -30,11 +30,14 @@ h3 { font-size: var(--font-size-md); }
 .btn {
     /* padding: 2px; */
     background-color: var(--black);
+    text-align: center;
+    font-weight: bolder;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 4px 4px;
     text-decoration: none;
-    margin: 4px 2px;
+    border-radius: 10rem;
+    margin-top: 1rem;
     cursor: pointer;
 }
 
@@ -60,12 +63,12 @@ img {
 }
 
 /* Hero Section  */
-.hero-image {
+/* .home-image {
     max-height: 528px;
     filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
     overflow: hidden;
     border: var(--border-radius);
-}
+} */
 
 /* Main Header  */
 .header {
@@ -93,10 +96,6 @@ img {
     font-weight: 800;
     font-size: 25px;
     text-decoration: none;
-}
-
-.header_logo:hover {
-    text-decoration: underline;
 }
 
 .header_nav {
@@ -130,6 +129,10 @@ img {
     cursor: pointer;
 }
 
+.change {
+    margin-left: 80%;
+}
+
 /* Header --> Navigation  */
 
 .header_nav ul {
@@ -146,7 +149,7 @@ img {
 }
 
 .header_nav ul a:hover {
-    text-decoration: underline;
+    color: var(--gray);
 }
 
 .header_nav ul a.active {
@@ -156,8 +159,8 @@ img {
 /*Barre de navigation thèmes */
 
 .sub-nav {
-    /* background-color: #f8f8f8; */
-    margin-top: 1rem;
+
+    margin-top: 2rem;
     padding: 10px 0;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -199,12 +202,12 @@ img {
 
 .author_body {
     font-size: var(--font-size-md);
-    margin: 5px 0 40px 0;
+    margin: 8px 0 40px 0;
 }
 
 /* Article Accueil liste  */
 .articles_heading {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-weight: 400;
 }
 

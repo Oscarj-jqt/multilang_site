@@ -69,3 +69,17 @@ msgstr "Impact of Industrial Food on Health: Why Limit?"
 #: templates/accueil.html:87
 msgid "Éthique de l'Intelligence Artificielle : Défis et Réflexions"
 msgstr "Ethics of Artificial Intelligence: Challenges and Reflections"
+
+
+#: templates/article_detail.html:34
+msgid "Explorez comment utiliser Django pour développer des applications multilingues. Découvrez l'intégration des modèles de langage (LLM) pour créer des chatbots et une recherche augmentée par l'intelligence artificielle."
+msgstr "Explore how to use Django to develop multilingual applications. Discover the integration of language models (LLM) to create chatbots and AI-augmented search."
+
+#: templates/article_detail.html:34
+msgid "Explorez les effets néfastes de la nourriture industrielle sur notre santé. Découvrez comment les additifs, les conservateurs et les sucres ajoutés peuvent contribuer à des problèmes de santé chroniques."
+msgstr "Explore the harmful effects of industrial food on our health. Discover how additives, preservatives, and added sugars can contribute to chronic health problems."
+
+#: templates/article_detail.html:34
+msgid "Plongez dans les débats éthiques entourant l'intelligence artificielle. Explorez les implications de l'automatisation et de la prise de décision algorithmique sur la société moderne."
+msgstr "Dive into the ethical debates surrounding artificial intelligence. Explore the implications of automation and algorithmic decision-making on modern society."
+

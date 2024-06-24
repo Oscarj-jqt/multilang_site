@@ -58,3 +58,15 @@ msgstr "Développement web"
 #: templates/accueil.html:80
 msgid "Latest articles"
 msgstr "Derniers articles"
+
+#: templates/article_detail.html:34
+msgid "Explorez comment utiliser Django pour développer des applications multilingues. Découvrez l'intégration des modèles de langage (LLM) pour créer des chatbots et une recherche augmentée par l'intelligence artificielle."
+msgstr "Explorez comment utiliser Django pour développer des applications multilingues. Découvrez l'intégration des modèles de langage (LLM) pour créer des chatbots et une recherche augmentée par l'intelligence artificielle."
+
+#: templates/article_detail.html:34
+msgid "Explorez les effets néfastes de la nourriture industrielle sur notre santé. Découvrez comment les additifs, les conservateurs et les sucres ajoutés peuvent contribuer à des problèmes de santé chroniques."
+msgstr "Explorez les effets néfastes de la nourriture industrielle sur notre santé. Découvrez comment les additifs, les conservateurs et les sucres ajoutés peuvent contribuer à des problèmes de santé chroniques."
+
+#: templates/article_detail.html:34
+msgid "Plongez dans les débats éthiques entourant l'intelligence artificielle. Explorez les implications de l'automatisation et de la prise de décision algorithmique sur la société moderne."
+msgstr "Plongez dans les débats éthiques entourant l'intelligence artificielle. Explorez les implications de l'automatisation et de la prise de décision algorithmique sur la société moderne."

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .chat_gpt import get_chat_response
 from django.conf import settings
 from datetime import datetime
+from django.shortcuts import render, get_object_or_404
 from .models import Article
 from .models import Message
 import requests
@@ -27,6 +28,15 @@ def article_detail(request, id):
     articles = Article.objects.all()
     return render(request, 'article_detail.html', {'articles': articles})
 
+
+#Page de détail article
+def article_detail(request, article_id):
+    article = get_object_or_404(Article, id=article_id)
+    context = {
+        'article': article,
+        'current_year': datetime.now().year,
+    }
+    return render(request, 'article_detail.html', context)
 
 #Vue du Chatbot
 #Elle traitera les requêtes des utilisateurs et va renvoyer les réponses GPT
@@ -63,7 +73,7 @@ def get_ai_response(user_input: str) -> str:
     if 'choices' in response_data:
         ai_message = response_data['choices'][0]['message']['content']
     else:
-        ai_message = "Sorry, an error occurred while processing your request."
+        ai_message = "Une erreur est survenue."
 
     return ai_message
 

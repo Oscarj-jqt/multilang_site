@@ -22,8 +22,10 @@ from . import views
 # Configuration des urls pour l'app
 urlpatterns = [
     path('accueil', views.accueil, name="accueil"),
+    #affichage du contenu à partir de l'id dans la bdd
+    path('article/<int:article_id>/', views.article_detail, name='article_detail'),
     # Inclure les URL i18n pour le changement de langue
     path('i18n/', include('django.conf.urls.i18n')) ,
-    #L'url pour la  vue du chatbot
+    #L'url pour la vue du chatbot
     path('chat_view/', views.chat_view, name='chat_view') 
 ]

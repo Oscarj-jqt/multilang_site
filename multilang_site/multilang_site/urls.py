@@ -21,7 +21,9 @@ from django.shortcuts import redirect
 from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
+    #l'url principal pour le user
     path('multilang/', include("main.urls")),
+    #l'url pour l'administrateur
     path('admin/', admin.site.urls),
     #l'URL pour le changement de langue
     path('i18n/', include('django.conf.urls.i18n')),
