@@ -1,8 +1,6 @@
-Readmme.md
+# multilang_site
 
-## Présentation
-
-**multilang_site** est un projet Django conçu pour créer un site web simple et multilingue avec une gestion de contenu basique et des fonctionnalités avancées utilisant des modèles de langage (LLM). Ce projet met l'accent sur l'internationalisation, permettant de basculer entre plusieurs langues, et intègre des outils d'intelligence artificielle pour améliorer l'expérience utilisateur.
+multilang_site est un projet Django conçu pour créer un site web simple et multilingue avec une gestion de contenu basique et des fonctionnalités avancées utilisant des modèles de langage (LLM). Ce projet met l'accent sur l'internationalisation, permettant de basculer entre plusieurs langues, et intègre des outils d'intelligence artificielle pour améliorer l'expérience utilisateur.
 
 ## Fonctionnalités
 
@@ -10,41 +8,63 @@ Readmme.md
 - **Gestion des Articles de Blog** : Création, lecture et affichage des articles de blog.
 - **Interface Utilisateur Multilingue** : Possibilité de changer la langue de l'interface utilisateur.
 - **Chatbot Intégré** : Vue dédiée pour interagir avec un modèle de langage.
-- **Recherche Augmentée (RAG)** : Fonctionnalité de recherche enrichie par un modèle de langage pour obtenir des réponses pertinentes.
 
-- **Instructions de l'utilisateur de l'app** : 
+## Instructions pour exécuter le projet
+
+### Prérequis
+
+Avant de démarrer, assurez-vous d'avoir installé les éléments suivants sur votre système :
+
+- Python (version 3.x recommandée)
+- Django
+- pip (gestionnaire de paquets Python)
+- Environnement virtuel (recommandé pour isoler les dépendances du projet)
+
+### Installation des dépendances
+
+Clonez le repository depuis GitHub :
+
+```bash
+git clone <lien_vers_votre_repository>
+cd multilang_site
+
+Créez et activez votre environnement virtuel :
+
+bash
+
+python -m venv env
+source env/bin/activate  # Pour Linux/Mac
+env\Scripts\activate     # Pour Windows
+
+Installez les dépendances Python nécessaires à l'aide de pip en utilisant le fichier requirements.txt :
+
+bash
+
+pip install -r requirements.txt
 
 
-- ajouter trad pour le bouton change language
+Configuration de l'application Django
+Configurez les variables d'environnement nécessaires. Créez un fichier .env à la racine du projet avec les informations sensibles :
 
-Réduire la marge extérieure
+dotenv
 
-styliser le sélecteur de langues
+SECRET_KEY=your_secret_key_here
+DEBUG=True
 
-finir la recherche
+Appliquez les migrations pour créer la structure de base de données :
 
-fonctionnalité de IA, etc...
+bash
 
-La dernière partie du projet : 
+python manage.py migrate
 
-Utilisation de Modèles de Langage (LLM) et RAG (optionnel mais recommandé) :
+Chargez les données initiales si nécessaire :
 
-Intégrez un chatbot utilisant un modèle de langage (par exemple, GPT) dans votre application Django.
+bash
 
+python manage.py loaddata initial_data
 
-on va utiliser openAI et leur système d'API
+Lancez le serveur de développement Django pour voir votre application en action :
 
-ressource
-https://www.freecodecamp.org/news/localize-django-app/
+bash
 
-chercher une pour la suite
-
-https://www.photondesigner.com/articles/chatgpt-htmx-django?ref=yt-Y8GjRrotz6M
-
-La dernière partie du projet : 
-
-Changer le code de views.py
-
-mettre .env dans gitignore
-
-refaire un commit et push
+python manage.py runserver
