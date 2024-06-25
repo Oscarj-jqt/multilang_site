@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: multilang_site
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn multilang_site.multilang_site.wsgi:application"
