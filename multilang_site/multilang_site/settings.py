@@ -29,7 +29,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vfwfc)nwhz-(+n-8&w9&v&snnypb=zboveq4o1bu-^u6yfhv+y'
 
 #La clé OpenAI
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    raise ValueError("La clé API est manquante")
+else:
+    print("La clé est bien configurée")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

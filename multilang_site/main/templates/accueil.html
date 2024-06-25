@@ -13,20 +13,6 @@
 </head>
 <body>
 
-    <!--Fonctionnalité pour changer de langue-->
-    <!--On envoie la requête avec la langue récupérée du user à la vue set_language-->
-    <form action="{% url 'set_language' %}" method="post" class="change">
-        <!--sécurisation du formulaire-->
-        {% csrf_token %}
-        <!--redirection du user à partir de la saisie du user-->
-        <input name="next" type="hidden" value="{{ redirect_to }}" />
-        <select name="language">
-            <option value="fr">{% trans "Français" %}</option>
-            <option value="en">{% trans "English" %}</option>
-            <option value="deu">{% trans "Deutsch" %}</option>
-        </select>
-        <input class="btn" type="submit" value="{% trans "Changer de langue" %}">
-    </form>
     <header class="header">
         <a href="{% url 'accueil' %}" class="header_logo">Multilang</a>
 
@@ -54,12 +40,26 @@
                 {% trans "Fermer la recherche" %}
             </button>
         </div> -->
+        <!--Fonctionnalité pour changer de langue-->
+    <!--On envoie la requête avec la langue récupérée du user à la vue set_language-->
+    <form action="{% url 'set_language' %}" method="post" class="change">
+        <!--sécurisation du formulaire-->
+        {% csrf_token %}
+        <!--redirection du user à partir de la saisie du user-->
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select name="language">
+            <option value="fr">{% trans "Français" %}</option>
+            <option value="en">{% trans "English" %}</option>
+            <option value="deu">{% trans "Deutsch" %}</option>
+        </select>
+        <input class="btn" type="submit" value="{% trans "Changer de langue" %}">
+    </form>
     </header>
 
 
     <nav class="sub-nav">
         <ul>
-            <li><a href="">{% trans "Développement" %}</a></li>
+            <li><a href="">{% trans "Digital" %}</a></li>
             <li><a href="">{% trans "Nutrition" %}</a></li>
             <li><a href="">{% trans "Philosophie" %}</a></li>
         </ul>

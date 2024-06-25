@@ -130,7 +130,7 @@ img {
 }
 
 .change {
-    margin-left: 80%;
+    margin-left: 10%;
 }
 
 /* Header --> Navigation  */
@@ -138,7 +138,7 @@ img {
 .header_nav ul {
     list-style-type: none;
     display: flex;
-    gap: 7rem;
+    gap: 10rem;
     font-weight: 600;
     padding: 0;
 }
@@ -182,7 +182,7 @@ img {
 }
 
 .sub-nav ul li {
-    margin: 0 15px;
+    margin: 0 40px;
 }
 
 .sub-nav ul li a:hover {

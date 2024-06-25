@@ -35,8 +35,8 @@ msgid "Changer de langue"
 msgstr "Change language"
 
 #: templates/accueil.html:61
-msgid "Développement"
-msgstr "Development"
+msgid "Digital"
+msgstr "Digital"
 
 #: templates/accueil.html:62
 msgid "Nutrition"

@@ -8,6 +8,8 @@ from django.shortcuts import render, get_object_or_404
 from .models import Article
 from .models import Message
 import requests
+from dotenv import load_dotenv
+import os
 #marquer le texte pour la localisation
 from django.utils.translation import gettext as _
 
@@ -22,7 +24,6 @@ def accueil(request):
         'current_year': datetime.now().year,
     }
     return render(request, 'accueil.html', context)
-    # return render(request, 'accueil.html', {'posts': posts})  # Passe detaile des articles au template
 
 def article_detail(request, id):
     articles = Article.objects.all()
@@ -50,14 +51,17 @@ def chat_view(request):
     return render(request, 'chatbot.html', {'messages': messages})
 
 def get_ai_response(user_input: str) -> str:
-    # Set up the API endpoint and headers
+    api_key = os.getenv('OPENAI_API_KEY')
+    if not api_key:
+        return "API key is missing."
+    # Configurer l'URL de l'API et les en-têtes
     endpoint = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Authorization": "Bearer sk-proj-1CZXNIGuQWdrbnNtsOMaT3BlbkFJEyr4dWWRnmDHjzG8Xjf4",
         "Content-Type": "application/json",
     }
 
-    # Data payload
+    # Charger les données
     messages = get_existing_messages()
     messages.append({"role": "user", "content": f"{user_input}"})
     data = {
@@ -69,7 +73,7 @@ def get_ai_response(user_input: str) -> str:
     response_data = response.json()
 
 
-    # Check if 'choices' key exists in response_data
+    # Vérifiez si la clé 'choices' existe dans response_data
     if 'choices' in response_data:
         ai_message = response_data['choices'][0]['message']['content']
     else:
@@ -78,9 +82,6 @@ def get_ai_response(user_input: str) -> str:
     return ai_message
 
 def get_existing_messages() -> list:
-    """
-    Get all messages from the database and format them for the API.
-    """
     formatted_messages = []
 
     for message in Message.objects.values('user_message', 'bot_message'):
