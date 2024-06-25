@@ -1,1 +1,1 @@
-web: gunicorn multilang_site.multilang_site.wsgi:application
+web: gunicorn C:\multilang_site\multilang_site\multilang_site.wsgi:application
