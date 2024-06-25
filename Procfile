@@ -1,1 +1,1 @@
-web: gunicorn multilang_site.wsgi:application
+web: gunicorn multilang_site/multilang_site.wsgi:application
