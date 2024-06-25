@@ -7,7 +7,7 @@ multilang_site est un projet Django conçu pour créer un site web simple et mul
 - **Internationalisation (i18n)** : Support de plusieurs langues (français et anglais).
 - **Gestion des Articles de Blog** : Création, lecture et affichage des articles de blog.
 - **Interface Utilisateur Multilingue** : Possibilité de changer la langue de l'interface utilisateur.
-- **Chatbot Intégré** : Vue dédiée pour interagir avec un modèle de langage.
+- **Chatbot Intégré** : Vue dédiée pour interragir avec un modèle de langage.
 
 ## Instructions pour exécuter le projet
 

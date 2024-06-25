@@ -39,7 +39,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://multilang-site-9nfb.onrender.com"]
 
 
 # Application definition
@@ -63,7 +63,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #Autoriser Django à détecter la langue choisie par le user
-    'django.middleware.locale.LocaleMiddleware'
+    'django.middleware.locale.LocaleMiddleware',
+    #déploiement de render
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'multilang_site.urls'
@@ -158,6 +160,9 @@ STATICFILES_DIRS = [
 
 # Ajouter cette ligne pour définir le répertoire de collecte des fichiers statiques
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#cnfiguration de whitenoise pour le déploiement
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
