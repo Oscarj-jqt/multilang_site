@@ -82,10 +82,14 @@ def get_ai_response(user_input: str) -> str:
     return ai_message
 
 def get_existing_messages() -> list:
+    # Initialiser une liste vide pour stocker les messages formatés
     formatted_messages = []
 
+# Récupérer tous les messages de la base de données en sélectionnant uniquement les champs 'user_message' et 'bot_message'
     for message in Message.objects.values('user_message', 'bot_message'):
+        # Ajouter chaque message utilisateur à la liste formatée avec le rôle 'user'
         formatted_messages.append({"role": "user", "content": message['user_message']})
+        # Ajouter chaque réponse du bot à la liste formatée avec le rôle 'assistant'
         formatted_messages.append({"role": "assistant", "content": message['bot_message']})
 
     return formatted_messages
