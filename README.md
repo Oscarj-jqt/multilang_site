@@ -61,7 +61,6 @@ python manage.py migrate
 
 #Chargez les données initiales si nécessaire :
 
-bash
 
 python manage.py loaddata initial_data
 
