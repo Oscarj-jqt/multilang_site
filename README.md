@@ -42,7 +42,6 @@ env\Scripts\activate     # Pour Windows
 
 #Installez les dépendances Python nécessaires à l'aide de pip en utilisant le fichier requirements.txt :
 
-bash
 
 pip install -r requirements.txt
 
