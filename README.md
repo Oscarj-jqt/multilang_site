@@ -57,7 +57,6 @@ DEBUG=True
 
 #Appliquez les migrations pour créer la structure de base de données :
 
-bash
 
 python manage.py migrate
 
