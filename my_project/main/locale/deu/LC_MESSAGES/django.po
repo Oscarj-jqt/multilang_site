@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/accueil.html:22
+msgid "Accueil"
+msgstr "Startseite"
+
+#: templates/accueil.html:25
+msgid "À propos"
+msgstr "Über uns"
+
+#: templates/accueil.html:29
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/accueil.html:36
+msgid "Rechercher"
+msgstr "Suche"
+
+#: templates/accueil.html:39
+msgid "Fermer la recherche"
+msgstr "Suche schließen"
+
+#: templates/accueil.html:56
+msgid "Changer de langue"
+msgstr "Sprache ändern"
+
+#: templates/accueil.html:61
+msgid "Digital"
+msgstr "Digital"
+
+#: templates/accueil.html:62
+msgid "Nutrition"
+msgstr "Ernährung"
+
+#: templates/accueil.html:63
+msgid "Philosophie"
+msgstr "Philosophie"
+
+#: templates/accueil.html:72
+msgid "À la Une"
+msgstr "Im Blickpunkt"
+
+#: templates/accueil.html:73
+msgid "Développement web"
+msgstr "Webentwicklung"
+
+#: templates/accueil.html:80
+msgid "Derniers articles"
+msgstr "Neueste Artikel"
+
+#: templates/accueil.html:87
+msgid "Créer une Application Multilingue avec Django et LLM"
+msgstr "Eine mehrsprachige Anwendung mit Django und LLM erstellen"
+
+#: templates/accueil.html:87
+msgid "Impact de la Nourriture Industrielle sur la Santé : Pourquoi Limiter ?"
+msgstr "Auswirkungen von Industrienahrung auf die Gesundheit: Warum begrenzen?"
+
+#: templates/accueil.html:87
+msgid "Éthique de l'Intelligence Artificielle : Défis et Réflexions"
+msgstr "Ethik der Künstlichen Intelligenz: Herausforderungen und Reflexionen"
+
+#: templates/article_detail.html:34
+msgid "Explorez comment utiliser Django pour développer des applications multilingues. Découvrez l'intégration des modèles de langage (LLM) pour créer des chatbots et une recherche augmentée par l'intelligence artificielle."
+msgstr "Erkunden Sie, wie Sie Django zur Entwicklung mehrsprachiger Anwendungen nutzen können. Entdecken Sie die Integration von Sprachmodellen (LLM), um Chatbots und KI-unterstützte Suchfunktionen zu erstellen."
+
+#: templates/article_detail.html:34
+msgid "Explorez les effets néfastes de la nourriture industrielle sur notre santé. Découvrez comment les additifs, les conservateurs et les sucres ajoutés peuvent contribuer à des problèmes de santé chroniques."
+msgstr "Erkunden Sie die schädlichen Auswirkungen von industriell hergestellten Lebensmitteln auf unsere Gesundheit. Entdecken Sie, wie Zusatzstoffe, Konservierungsmittel und zugesetzte Zucker zu chronischen Gesundheitsproblemen beitragen können."
+
+#: templates/article_detail.html:34
+msgid "Plongez dans les débats éthiques entourant l'intelligence artificielle. Explorez les implications de l'automatisation et de la prise de décision algorithmique sur la société moderne."
+msgstr "Tauchen Sie ein in die ethischen Debatten rund um künstliche Intelligenz. Erkunden Sie die Auswirkungen von Automatisierung und algorithmischer Entscheidungsfindung auf die moderne Gesellschaft."

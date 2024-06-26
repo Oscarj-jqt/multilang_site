@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilang</title>
+    <!--Liaison des fichiers statics css et js avec les templates HTML-->
+    {% load static %}
+    <!--Liaison avec les fichiers de traduction-->
+    {% load i18n %}
+    <link rel="stylesheet" href="{% static 'multilang_site/CSS/styles.css' %}">
+    <script src="{% static 'multilang_site/JavaScript/script.js' %}"></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="{% url 'accueil' %}" class="header_logo">Multilang</a>
+
+        <nav class="header_nav">
+            <ul>
+                <li>
+                    <!--On marque les textes à traduire avec "trans"-->
+                    <a href="{% url 'accueil' %}">{% trans "Accueil" %}</a>
+                </li>
+                <li>
+                    <a href="{% url 'chat_view' %}">{% trans "Chatbot" %}</a>
+
+                </li>
+                <!-- <li>
+                    <a href="">{% trans "Contact" %}</a>
+                </li> -->
+            </ul>
+        </nav>
+
+        <!-- <div class="header_button">
+            <button id ="searchBar" class="searchBtn" aria-expanded="false">
+                {% trans "Rechercher" %}
+            </button>
+            <button id="searchClose" class="searchClose">
+                {% trans "Fermer la recherche" %}
+            </button>
+        </div> -->
+        <!--Fonctionnalité pour changer de langue-->
+    <!--On envoie la requête avec la langue récupérée du user à la vue set_language-->
+    <form action="{% url 'set_language' %}" method="post" class="change">
+        <!--sécurisation du formulaire-->
+        {% csrf_token %}
+        <!--redirection du user à partir de la saisie du user-->
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select name="language">
+            <option value="fr">{% trans "Français" %}</option>
+            <option value="en">{% trans "English" %}</option>
+            <option value="deu">{% trans "Deutsch" %}</option>
+        </select>
+        <input class="btn" type="submit" value="{% trans "Changer de langue" %}">
+    </form>
+    </header>
+
+
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="">{% trans "Digital" %}</a></li>
+            <li><a href="">{% trans "Nutrition" %}</a></li>
+            <li><a href="">{% trans "Philosophie" %}</a></li>
+        </ul>
+    </nav>
+        <!-- templates/home.html -->
+
+    <!-- Page d'accueil -->
+    <div class="author">
+        <h1 class="author_heading">{% trans "À la Une" %}</h1>
+        <p class="author_body">{% trans "Développement web" %}</p>
+        <img src="{% static 'multilang_site/Images/home-picture.jpg' %}" alt="" class="home-image" width="981" height="528" >
+    </div>
+
+
+    <section class="articles">
+        <h2 class="articles_heading">{% trans "Derniers articles" %}</h2>
+
+        <ul class="articles-ul">
+            <!-- Utilisation de la boucle for pour parcourir les articles -->
+            {% for article in articles %}
+            <li>
+                <a href="{% url 'article_detail' article.id %}">
+                    <span>{% trans article.title %}</span>
+                    <span class="articles-list_date">{{ article.publication_date|date:"d M Y" }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- main/templates/footer.html -->
+<footer class="footer">
+    &copy; {{ current_year }} Multilang
+</footer>
+
+
+</body>
+
+</html>
