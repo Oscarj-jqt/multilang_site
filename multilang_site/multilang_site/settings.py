@@ -46,7 +46,7 @@ ALLOWED_HOSTS = ["https://multilang-site-9nfb.onrender.com"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'main',
+    'multilang_site.main',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
