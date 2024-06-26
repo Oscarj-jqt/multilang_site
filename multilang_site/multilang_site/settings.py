@@ -39,14 +39,14 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://multilang-site-9nfb.onrender.com"]
+ALLOWED_HOSTS = ["https://multilang-site-9nfb.onrender.com","127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'multilang_site.main',
+    'main',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
