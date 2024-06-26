@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 import sys
 
 # Ajoutez le chemin du projet au PYTHONPATH
-sys.path.append('/opt/render/project/src')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multilang_site.multilang_site.settings')
+# sys.path.append('/opt/render/project/src')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multilang_site.multilang_site.settings')
 
 application = get_wsgi_application()
