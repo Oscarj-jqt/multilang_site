@@ -66,7 +66,6 @@ python manage.py loaddata initial_data
 
 #Lancez le serveur de développement Django pour voir votre application en action :
 
-bash
 
 python manage.py runserver
 
