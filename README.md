@@ -10,7 +10,10 @@ multilang_site est un projet Django conçu pour créer un site web simple et mul
 - **Chatbot Intégré** : Vue dédiée pour interragir avec un modèle de langage.
 
 
+
+
  Visiter le site : https://multilang-site-1.onrender.com
+
 
  
 
