@@ -15,51 +15,17 @@ multilang_site est un projet Django conçu pour créer un site web simple et mul
 
 ## Instructions pour exécuter le projet
 
-### Prérequis
-
-Avant de démarrer, assurez-vous d'avoir installé les éléments suivants sur votre système :
-
-- Python (version 3.x recommandée)
-- Django
-- pip (gestionnaire de paquets Python)
-- Environnement virtuel (recommandé pour isoler les dépendances du projet)
-  
-
 ### Installation des dépendances
 
 Clonez le repository depuis GitHub :
 
 ```bash
 git clone <lien_vers_votre_repository>
-cd multilang_site
-
-#Créez et activez votre environnement virtuel :
-
-
-python -m venv env
-source env/bin/activate  # Pour Linux/Mac
-env\Scripts\activate     # Pour Windows
 
 #Installez les dépendances Python nécessaires à l'aide de pip en utilisant le fichier requirements.txt :
 
-
 pip install -r requirements.txt
 
-
-#Configuration de l'application Django
-#Configurez les variables d'environnement nécessaires. Créez un fichier .env à la racine du projet avec les informations sensibles :
-
-dotenv
-
-SECRET_KEY=your_secret_key_here
-DEBUG=True
-
-#Appliquez les migrations pour créer la structure de base de données :
-
-
-python manage.py migrate
-
-#Chargez les données initiales si nécessaire :
 
 
 python manage.py loaddata initial_data
