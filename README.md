@@ -20,7 +20,7 @@ multilang_site est un projet Django conçu pour créer un site web simple et mul
 Clonez le repository depuis GitHub :
 
 ```bash
-git clone <lien_vers_votre_repository>
+git clone https://github.com/Oscarj-jqt/multilang_site
 
 #Installez les dépendances Python nécessaires à l'aide de pip en utilisant le fichier requirements.txt :
 
