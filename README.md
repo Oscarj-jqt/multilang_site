@@ -1,6 +1,6 @@
 # multilang_site
 
-multilang_site est un projet Django conçu pour créer un site web simple et multilingue avec une gestion de contenu basique et des fonctionnalités avancées utilisant des modèles de langage (LLM). Ce projet est axé sur l'internationalisation, permettant de basculer entre plusieurs langues, et intègre des outils d'intelligence artificielle pour améliorer l'expérience utilisateur.
+C' est un projet Django conçu pour créer un blog simple et multilingue avec une gestion de contenu basique et des fonctionnalités avancées utilisant des modèles de langage (LLM). Ce projet est axé sur l'internationalisation, permettant de basculer entre plusieurs langues, et intègre des outils d'intelligence artificielle pour améliorer l'expérience utilisateur.
 
 ## Fonctionnalités
 
